@@ -16,6 +16,11 @@ class AtomSpec extends org.scalatest.FlatSpec {
         context.setValue("foo", "bar")
         assert(atom.evaluate(context) == Some("bar"))
     }
+    
+    it should "return its name as toString" in {
+        val atom = new Atom("foo")
+        assert(atom.toString() equals "foo")
+    }
 }
 
 
